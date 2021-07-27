@@ -26,12 +26,12 @@ Compared with ORB, the accuracy of the methods using SIFT is greatly improved, b
 But overall, the accuracy we obtained is very low, especially the translation vector, given that the baseline is only about 0.54 m. Such accuracy is not enough for us to obtain high-quality rectified images. Considering that our focus is to compare the performance of different stereo matching methods, we decide to use the rectified images provided by the dataset to do the follow-up work.
 
 ### Dense matching
-We use the rectified images provided in  KITTI2015 dataset to get disparity maps with 3 different methods, namely block matching, semi-global matching and PSMNet. For evaluation, we calculate an error rate, that is the percentage of error pixels to all valid pixels. And an error pixel means the difference between calculated disparity value and ground truth is greater than 3 dm and greater than 5\%. The qualitative results 
+We use the rectified images provided in  KITTI2015 dataset to get disparity maps with 3 different methods, namely block matching, semi-global matching and PSMNet. For evaluation, we calculate an error rate, that is the percentage of error pixels to all valid pixels. And an error pixel means the difference between calculated disparity value and ground truth is greater than 3 pixels and greater than 5\%. The qualitative results 
 are shown in Figure 2, the first row shows our disparity map, the second row shows the ground truth, and the third row shows the difference between our result and ground truth.
 
 ![disp_eval](./results/disp_eval.png)
 
-For comparison, we calculate the average error rate for each method. From Table 2, we know that PSMNet works best, it can ensure that nearly 99\% of pixels have an disparity error within 5\% or under 3 dm. While block matching has the worst effect, only half of the pixels have lower disparity error.
+For comparison, we calculate the average error rate for each method. From Table 2, we know that PSMNet works best, it can ensure that nearly 99\% of pixels have an disparity error within 5\% or under 3 pixels. While block matching has the worst effect, only half of the pixels have lower disparity error.
 
 ![table2](./results/table2.png)
 
